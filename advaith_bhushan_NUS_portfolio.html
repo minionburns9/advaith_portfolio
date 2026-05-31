@@ -1,0 +1,2100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Advaith Bhushan | NUS High DSA STEM Portfolio</title>
+  <meta name="description" content="NUS High DSA STEM portfolio for Advaith Bhushan, showcasing Math, Science, problem-solving, leadership, and research curiosity." />
+  <style>
+    :root {
+      --bg: #07111f;
+      --bg-soft: #0c1728;
+      --card: rgba(255,255,255,0.08);
+      --card-strong: rgba(255,255,255,0.13);
+      --line: rgba(255,255,255,0.16);
+      --text: #f5f7fb;
+      --muted: #aab7cc;
+      --soft: #dce6f7;
+      --accent: #76e4f7;
+      --accent-2: #a78bfa;
+      --accent-3: #f9d77e;
+      --good: #8cf0b7;
+      --warn: #ffd166;
+      --shadow: 0 24px 80px rgba(0,0,0,0.35);
+      --radius-xl: 28px;
+      --radius-lg: 20px;
+      --radius-md: 14px;
+      --max: 1180px;
+    }
+
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      background:
+        radial-gradient(circle at 10% 10%, rgba(118,228,247,0.18), transparent 28%),
+        radial-gradient(circle at 84% 8%, rgba(167,139,250,0.2), transparent 30%),
+        radial-gradient(circle at 50% 80%, rgba(249,215,126,0.12), transparent 32%),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .page-shell {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(18px);
+      background: rgba(7,17,31,0.76);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      width: min(var(--max), calc(100% - 32px));
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      padding: 14px 0;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .brand-mark {
+      width: 38px;
+      height: 38px;
+      border-radius: 14px;
+      background:
+        linear-gradient(135deg, rgba(118,228,247,0.95), rgba(167,139,250,0.95));
+      display: grid;
+      place-items: center;
+      color: #07111f;
+      font-weight: 900;
+      box-shadow: 0 12px 36px rgba(118,228,247,0.25);
+      flex: 0 0 auto;
+    }
+
+    .brand-text {
+      min-width: 0;
+    }
+
+    .brand-text strong {
+      display: block;
+      font-size: 0.95rem;
+      line-height: 1.1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .brand-text span {
+      display: block;
+      font-size: 0.74rem;
+      color: var(--muted);
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      padding: 8px 10px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      font-size: 0.78rem;
+      transition: 0.2s ease;
+    }
+
+    .nav-links a:hover {
+      color: var(--text);
+      background: var(--card);
+      border-color: var(--line);
+    }
+
+    .hero {
+      min-height: 92vh;
+      display: grid;
+      grid-template-columns: 1.08fr 0.92fr;
+      gap: 34px;
+      align-items: center;
+      padding: 76px 0 46px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 22px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 8px 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.07);
+      border-radius: 999px;
+      color: var(--soft);
+      font-size: 0.82rem;
+    }
+
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(118,228,247,0.1);
+    }
+
+    h1 {
+      font-size: clamp(2.6rem, 7vw, 6.6rem);
+      line-height: 0.93;
+      margin: 0;
+      letter-spacing: -0.03em;
+    }
+
+    .gradient-text {
+      background: linear-gradient(135deg, #ffffff 0%, #76e4f7 45%, #a78bfa 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .hero-copy {
+      max-width: 740px;
+      color: var(--soft);
+      font-size: clamp(1.05rem, 1.7vw, 1.28rem);
+      margin: 24px 0 0;
+    }
+
+    .hero-copy strong {
+      color: white;
+    }
+
+    .cta-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 13px 17px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: var(--card);
+      color: white;
+      font-weight: 700;
+      transition: 0.2s ease;
+      box-shadow: 0 12px 34px rgba(0,0,0,0.18);
+    }
+
+    .btn.primary {
+      background: linear-gradient(135deg, rgba(118,228,247,0.95), rgba(167,139,250,0.95));
+      color: #07111f;
+      border: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      filter: brightness(1.05);
+    }
+
+    .hero-panel {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 22px;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.13), rgba(255,255,255,0.06));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .hero-panel::before {
+      content: "";
+      position: absolute;
+      inset: -1px;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 40% 0%, rgba(118,228,247,0.28), transparent 34%),
+        radial-gradient(circle at 95% 30%, rgba(249,215,126,0.18), transparent 28%);
+      z-index: 0;
+    }
+
+    .hero-panel > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .profile-card {
+      min-height: 220px;
+      border-radius: 24px;
+      padding: 24px;
+      background:
+        linear-gradient(145deg, rgba(7,17,31,0.7), rgba(12,23,40,0.76));
+      border: 1px solid var(--line);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .profile-card::after {
+      content: "∑";
+      position: absolute;
+      right: -10px;
+      bottom: -66px;
+      font-size: 15rem;
+      font-weight: 900;
+      color: rgba(255,255,255,0.05);
+      line-height: 1;
+    }
+
+    .avatar {
+      width: 84px;
+      height: 84px;
+      border-radius: 26px;
+      display: grid;
+      place-items: center;
+      font-size: 1.65rem;
+      font-weight: 900;
+      color: #07111f;
+      background: linear-gradient(135deg, var(--accent), var(--accent-3));
+      margin-bottom: 18px;
+    }
+
+    .profile-card h2 {
+      margin: 0;
+      font-size: 1.6rem;
+      letter-spacing: -0.03em;
+    }
+
+    .profile-card p {
+      margin: 8px 0 0;
+      color: var(--muted);
+      max-width: 360px;
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .stat {
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.07);
+      padding: 16px;
+    }
+
+    .stat b {
+      display: block;
+      font-size: 1.7rem;
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 5px;
+    }
+
+    section {
+      padding: 56px 0;
+    }
+
+    .section-head {
+      display: flex;
+      align-items: end;
+      justify-content: space-between;
+      gap: 24px;
+      margin-bottom: 24px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: var(--accent);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      font-weight: 800;
+      margin-bottom: 8px;
+    }
+
+    .section-head h2,
+    .single-head h2 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.6rem);
+      line-height: 1;
+      letter-spacing: -0.06em;
+    }
+
+    .section-head p,
+    .single-head p {
+      margin: 12px 0 0;
+      color: var(--muted);
+      max-width: 700px;
+    }
+
+    .grid {
+      display: grid;
+      gap: 18px;
+    }
+
+    .grid.two {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid.three {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius-lg);
+      padding: 22px;
+      background: var(--card);
+      backdrop-filter: blur(12px);
+      box-shadow: 0 18px 50px rgba(0,0,0,0.16);
+    }
+
+    .card.strong {
+      background: var(--card-strong);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.2rem;
+      letter-spacing: -0.03em;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+    }
+
+    .fit-card {
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .fit-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: 16px;
+      display: grid;
+      place-items: center;
+      background: rgba(118,228,247,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(118,228,247,0.25);
+      flex: 0 0 auto;
+      font-weight: 900;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .year-card {
+      min-height: 280px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .year {
+      font-size: 3.2rem;
+      font-weight: 900;
+      line-height: 0.9;
+      letter-spacing: -0.08em;
+      color: rgba(255,255,255,0.9);
+      margin-bottom: 20px;
+    }
+
+    .year-card ul,
+    .simple-list {
+      margin: 0;
+      padding-left: 18px;
+      color: var(--soft);
+    }
+
+    .year-card li,
+    .simple-list li {
+      margin: 8px 0;
+      color: var(--muted);
+    }
+
+    .award-grid {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 12px;
+    }
+
+    .award {
+      min-height: 164px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 16px;
+      background: rgba(255,255,255,0.07);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: 0.22s ease;
+    }
+
+    .award:hover {
+      transform: translateY(-4px);
+      background: rgba(255,255,255,0.11);
+      border-color: rgba(118,228,247,0.38);
+    }
+
+    .award .tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 5px 8px;
+      border-radius: 999px;
+      background: rgba(118,228,247,0.12);
+      color: var(--accent);
+      font-size: 0.68rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 800;
+    }
+
+    .award h3 {
+      font-size: 0.98rem;
+      margin: 14px 0 8px;
+    }
+
+    .award p {
+      color: var(--muted);
+      font-size: 0.82rem;
+      line-height: 1.4;
+    }
+
+    .story {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 18px;
+      align-items: stretch;
+    }
+
+    .quote-card {
+      padding: 34px;
+      border-radius: var(--radius-xl);
+      background:
+        linear-gradient(135deg, rgba(118,228,247,0.12), rgba(167,139,250,0.13));
+      border: 1px solid var(--line);
+    }
+
+    .quote-mark {
+      font-size: 4rem;
+      line-height: 0.75;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .quote-card p {
+      font-size: clamp(1.15rem, 2vw, 1.55rem);
+      line-height: 1.45;
+      color: white;
+      margin: 0;
+      letter-spacing: -0.03em;
+    }
+
+    .placeholder {
+      border: 1px dashed rgba(249,215,126,0.45);
+      background: rgba(249,215,126,0.08);
+      color: #fff2c4;
+      border-radius: 18px;
+      padding: 16px;
+      margin-top: 14px;
+    }
+
+    .placeholder strong {
+      color: var(--accent-3);
+    }
+
+    .split-band {
+      padding: 28px;
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--line);
+      background:
+        linear-gradient(135deg, rgba(255,255,255,0.11), rgba(255,255,255,0.05));
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 22px;
+      align-items: center;
+    }
+
+    .mini-metric {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .metric-box {
+      border-radius: 18px;
+      padding: 16px;
+      border: 1px solid var(--line);
+      background: rgba(7,17,31,0.4);
+    }
+
+    .metric-box b {
+      display: block;
+      color: white;
+      font-size: 1.4rem;
+      letter-spacing: -0.05em;
+    }
+
+    .metric-box span {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+    .evidence-table {
+      width: 100%;
+      border-collapse: collapse;
+      overflow: hidden;
+      border-radius: var(--radius-lg);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.06);
+    }
+
+    .evidence-table th,
+    .evidence-table td {
+      padding: 14px 16px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    .evidence-table th {
+      color: var(--accent);
+      font-size: 0.78rem;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      background: rgba(255,255,255,0.05);
+    }
+
+    .evidence-table td {
+      color: var(--soft);
+      font-size: 0.92rem;
+    }
+
+    .evidence-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .footer {
+      padding: 38px 0 54px;
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 40px;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .edit-note {
+      border: 1px solid rgba(255,209,102,0.26);
+      background: rgba(255,209,102,0.08);
+      color: #ffe9a6;
+      border-radius: var(--radius-lg);
+      padding: 18px;
+      margin-top: 20px;
+    }
+
+    .print-chip {
+      color: var(--muted);
+      font-size: 0.82rem;
+    }
+
+
+    /* Award split-card reel: one award visible at a time */
+    .achievement-reel {
+      position: relative;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-xl);
+      padding: 24px;
+      background:
+        radial-gradient(circle at 10% 8%, rgba(118,228,247,0.12), transparent 30%),
+        linear-gradient(135deg, rgba(255,255,255,0.11), rgba(255,255,255,0.05));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .reel-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .reel-counter {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--soft);
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.07);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font-size: 0.88rem;
+      font-weight: 800;
+    }
+
+    .reel-counter-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 4px rgba(118,228,247,0.1);
+    }
+
+    .reel-controls {
+      display: flex;
+      gap: 10px;
+    }
+
+    .reel-control-btn {
+      width: 44px;
+      height: 44px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.08);
+      color: var(--text);
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 1.35rem;
+      transition: 0.18s ease;
+    }
+
+    .reel-control-btn:hover {
+      transform: translateY(-2px);
+      background: rgba(255,255,255,0.13);
+      border-color: rgba(118,228,247,0.45);
+    }
+
+    .award-stage {
+      position: relative;
+      min-height: 470px;
+      perspective: 1300px;
+    }
+
+    .award-card-split {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      grid-template-columns: 0.86fr 1.14fr;
+      gap: 22px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 22px;
+      background:
+        radial-gradient(circle at 10% 12%, rgba(118,228,247,0.12), transparent 28%),
+        linear-gradient(145deg, rgba(7,17,31,0.9), rgba(12,23,40,0.93));
+      box-shadow: 0 18px 60px rgba(0,0,0,0.24);
+      opacity: 0;
+      transform: translateX(70px) rotateY(-12deg) scale(0.96);
+      pointer-events: none;
+      transition:
+        opacity 380ms ease,
+        transform 520ms cubic-bezier(.2,.85,.28,1);
+      overflow: hidden;
+    }
+
+    .award-card-split.is-active {
+      opacity: 1;
+      transform: translateX(0) rotateY(0deg) scale(1);
+      pointer-events: auto;
+    }
+
+    .award-card-split.slide-left {
+      transform: translateX(-70px) rotateY(12deg) scale(0.96);
+    }
+
+    .award-card-split:hover {
+      border-color: rgba(118,228,247,0.5);
+      box-shadow: 0 22px 74px rgba(0,0,0,0.32);
+    }
+
+    .award-detail-panel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 18px;
+      min-width: 0;
+    }
+
+    .award-main-click {
+      cursor: pointer;
+      text-align: left;
+      border: 0;
+      background: transparent;
+      color: inherit;
+      padding: 0;
+      display: block;
+      width: 100%;
+    }
+
+    .award-tag-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+    }
+
+    .award-tag {
+      display: inline-flex;
+      width: fit-content;
+      padding: 6px 9px;
+      border-radius: 999px;
+      background: rgba(118,228,247,0.12);
+      color: var(--accent);
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-weight: 900;
+    }
+
+    .award-tag.gold {
+      background: rgba(249,215,126,0.13);
+      color: var(--accent-3);
+    }
+
+    .award-detail-panel h3 {
+      margin: 18px 0 0;
+      font-size: clamp(2.2rem, 4.3vw, 4.4rem);
+      line-height: 0.94;
+      letter-spacing: -0.075em;
+    }
+
+    .award-detail-panel p {
+      margin: 16px 0 0;
+      color: var(--muted);
+      font-size: 1.02rem;
+      max-width: 460px;
+    }
+
+    .award-reflection {
+      border: 1px dashed rgba(249,215,126,0.45);
+      background: rgba(249,215,126,0.08);
+      color: #fff2c4;
+      border-radius: 18px;
+      padding: 15px;
+      margin-top: 18px;
+    }
+
+    .award-reflection strong {
+      color: var(--accent-3);
+      display: block;
+      margin-bottom: 4px;
+    }
+
+    .card-actions {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+
+    .click-hint,
+    .open-cert-link {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border-radius: 999px;
+      padding: 10px 13px;
+      font-size: 0.88rem;
+      font-weight: 800;
+      transition: 0.18s ease;
+    }
+
+    .click-hint {
+      cursor: pointer;
+    }
+
+    .open-cert-link:hover,
+    .click-hint:hover {
+      transform: translateY(-2px);
+      border-color: rgba(118,228,247,0.45);
+      background: rgba(255,255,255,0.13);
+    }
+
+    .cert-preview-panel {
+      min-height: 420px;
+      border-radius: 24px;
+      border: 1px solid rgba(255,255,255,0.2);
+      background: rgba(255,255,255,0.95);
+      box-shadow: inset 0 0 0 8px rgba(7,17,31,0.05);
+      color: #0f172a;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cert-preview-panel iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 420px;
+      border: 0;
+      display: block;
+      background: white;
+    }
+
+    .cert-preview-fallback {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      text-align: center;
+      padding: 24px;
+      pointer-events: none;
+      background:
+        radial-gradient(circle at 20% 25%, rgba(118,228,247,0.18), transparent 30%),
+        linear-gradient(135deg, #ffffff, #e6edf9);
+    }
+
+    .cert-preview-fallback .mini {
+      display: inline-flex;
+      border: 1px solid rgba(15,23,42,0.18);
+      border-radius: 999px;
+      padding: 5px 10px;
+      font-size: 0.72rem;
+      font-weight: 900;
+      color: #0f766e;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 16px;
+    }
+
+    .cert-preview-fallback h4 {
+      margin: 0;
+      font-size: clamp(2rem, 4vw, 3.7rem);
+      line-height: 0.95;
+      letter-spacing: -0.07em;
+      color: #0f172a;
+    }
+
+    .cert-click-cover {
+      position: absolute;
+      inset: 0;
+      cursor: pointer;
+      background: transparent;
+      border: 0;
+      padding: 0;
+    }
+
+    .reel-dots {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin-top: 20px;
+    }
+
+    .reel-dot-btn {
+      width: 12px;
+      height: 12px;
+      border-radius: 999px;
+      border: none;
+      background: rgba(255,255,255,0.25);
+      cursor: pointer;
+      transition: 0.18s ease;
+      padding: 0;
+    }
+
+    .reel-dot-btn.is-active {
+      width: 34px;
+      background: var(--accent);
+    }
+
+    .reel-help-text {
+      text-align: center;
+      color: var(--muted);
+      margin: 16px 0 0;
+      font-size: 0.9rem;
+    }
+
+    /* Full-screen award certificate viewer */
+    .award-viewer {
+      position: fixed;
+      inset: 0;
+      z-index: 99;
+      background:
+        radial-gradient(circle at 15% 12%, rgba(118,228,247,0.16), transparent 30%),
+        radial-gradient(circle at 90% 18%, rgba(167,139,250,0.16), transparent 30%),
+        rgba(2,6,23,0.96);
+      display: none;
+      color: white;
+    }
+
+    .award-viewer.is-open {
+      display: grid;
+      grid-template-rows: auto 1fr;
+    }
+
+    .viewer-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 24px;
+      border-bottom: 1px solid var(--line);
+      background: rgba(7,17,31,0.72);
+      backdrop-filter: blur(14px);
+    }
+
+    .viewer-title {
+      min-width: 0;
+    }
+
+    .viewer-title strong {
+      display: block;
+      line-height: 1.1;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+
+    .viewer-title span {
+      display: block;
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-top: 3px;
+    }
+
+    .viewer-actions {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .viewer-btn {
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.08);
+      color: white;
+      border-radius: 999px;
+      padding: 10px 13px;
+      cursor: pointer;
+      font-weight: 800;
+    }
+
+    .viewer-body {
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      padding: 26px;
+      perspective: 1500px;
+    }
+
+    .viewer-card {
+      width: min(1180px, 100%);
+      height: min(720px, calc(100vh - 128px));
+      display: grid;
+      grid-template-columns: 0.38fr 0.62fr;
+      gap: 22px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      padding: 22px;
+      background: rgba(12,23,40,0.9);
+      box-shadow: var(--shadow);
+      transform-style: preserve-3d;
+      animation: viewerFlipIn 380ms ease both;
+    }
+
+    @keyframes viewerFlipIn {
+      from {
+        transform: rotateY(-10deg) translateX(28px);
+        opacity: 0;
+      }
+      to {
+        transform: rotateY(0deg) translateX(0);
+        opacity: 1;
+      }
+    }
+
+    .viewer-info {
+      min-width: 0;
+      overflow: auto;
+      padding: 8px;
+    }
+
+    .viewer-info h2 {
+      margin: 14px 0 0;
+      font-size: clamp(2rem, 4vw, 4.2rem);
+      line-height: 0.92;
+      letter-spacing: -0.075em;
+    }
+
+    .viewer-info p {
+      color: var(--muted);
+      margin: 16px 0 0;
+    }
+
+    .viewer-cert {
+      border-radius: 22px;
+      background: white;
+      color: #0f172a;
+      overflow: hidden;
+      display: grid;
+      place-items: center;
+      min-height: 100%;
+    }
+
+    .viewer-cert iframe {
+      width: 100%;
+      height: 100%;
+      min-height: 620px;
+      border: 0;
+      background: white;
+      display: block;
+    }
+
+    .viewer-nav {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 110;
+      width: 54px;
+      height: 54px;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.1);
+      color: white;
+      cursor: pointer;
+      display: grid;
+      place-items: center;
+      font-size: 1.8rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .viewer-nav.prev {
+      left: 20px;
+    }
+
+    .viewer-nav.next {
+      right: 20px;
+    }
+
+    .viewer-nav:hover,
+    .viewer-btn:hover {
+      background: rgba(255,255,255,0.16);
+      border-color: rgba(118,228,247,0.45);
+    }
+
+    @media (max-width: 920px) {
+      .nav {
+        align-items: flex-start;
+      }
+
+      .award-stage {
+        min-height: 760px;
+      }
+
+      .award-card-split,
+      .viewer-card {
+        grid-template-columns: 1fr;
+      }
+
+      .cert-preview-panel,
+      .cert-preview-panel iframe {
+        min-height: 360px;
+      }
+
+      .viewer-card {
+        height: calc(100vh - 126px);
+        overflow: auto;
+      }
+
+      .viewer-cert,
+      .viewer-cert iframe {
+        min-height: 500px;
+      }
+
+      .nav-links {
+        display: none;
+      }
+
+      .hero,
+      .story,
+      .split-band,
+      .grid.two {
+        grid-template-columns: 1fr;
+      }
+
+      .grid.three,
+      .timeline {
+        grid-template-columns: 1fr;
+      }
+
+      .award-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .section-head {
+        display: block;
+      }
+
+      .hero {
+        min-height: auto;
+        padding-top: 50px;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .reel-top {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .achievement-reel {
+        padding: 16px;
+        border-radius: 24px;
+      }
+
+      .award-stage {
+        min-height: 835px;
+      }
+
+      .award-card-split {
+        padding: 16px;
+        border-radius: 22px;
+      }
+
+      .viewer-top {
+        padding: 14px;
+      }
+
+      .viewer-body {
+        padding: 14px;
+      }
+
+      .viewer-card {
+        padding: 14px;
+        border-radius: 22px;
+      }
+
+      .viewer-nav {
+        width: 44px;
+        height: 44px;
+        top: auto;
+        bottom: 18px;
+        transform: none;
+      }
+
+      .viewer-nav.prev {
+        left: 18px;
+      }
+
+      .viewer-nav.next {
+        right: 18px;
+      }
+
+      .page-shell,
+      .nav {
+        width: min(100% - 22px, var(--max));
+      }
+
+      section {
+        padding: 40px 0;
+      }
+
+      .stats-grid,
+      .mini-metric,
+      .award-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-panel,
+      .card,
+      .quote-card,
+      .split-band {
+        border-radius: 22px;
+      }
+
+      .evidence-table {
+        display: block;
+        overflow-x: auto;
+      }
+    }
+
+    @media print {
+      body {
+        background: white;
+        color: #111827;
+      }
+
+      .topbar,
+      .cta-row,
+      .footer {
+        display: none;
+      }
+
+      .card,
+      .hero-panel,
+      .quote-card,
+      .split-band,
+      .award {
+        background: white;
+        border: 1px solid #d1d5db;
+        color: #111827;
+        box-shadow: none;
+      }
+
+      .gradient-text {
+        color: #111827;
+        background: none;
+      }
+
+      p,
+      .card p,
+      .year-card li,
+      .simple-list li,
+      .evidence-table td,
+      .muted {
+        color: #374151 !important;
+      }
+    }
+  
+    /* Floating Math Symbols Background - added from reference file */
+    .floating-math-bg {
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .floating-math-symbol {
+      position: absolute;
+      color: rgba(118,228,247,0.12);
+      font-weight: 900;
+      animation: floatingMathSymbol linear infinite;
+      text-shadow: 0 0 25px rgba(118,228,247,0.25);
+    }
+
+    .floating-math-symbol.m1 { left: 8%; font-size: 5rem; animation-duration: 22s; animation-delay: 0s; }
+    .floating-math-symbol.m2 { left: 22%; font-size: 7rem; animation-duration: 30s; animation-delay: -8s; }
+    .floating-math-symbol.m3 { left: 42%; font-size: 4rem; animation-duration: 24s; animation-delay: -12s; }
+    .floating-math-symbol.m4 { left: 63%; font-size: 6rem; animation-duration: 34s; animation-delay: -4s; }
+    .floating-math-symbol.m5 { left: 82%; font-size: 5rem; animation-duration: 28s; animation-delay: -15s; }
+
+    @keyframes floatingMathSymbol {
+      from {
+        transform: translateY(110vh) rotate(0deg);
+        opacity: 0;
+      }
+      10% { opacity: 1; }
+      90% { opacity: 1; }
+      to {
+        transform: translateY(-20vh) rotate(360deg);
+        opacity: 0;
+      }
+    }
+
+    main, header, footer {
+      position: relative;
+      z-index: 1;
+    }
+
+  </style>
+</head>
+<body>
+
+  <div class="floating-math-bg" aria-hidden="true">
+    <div class="floating-math-symbol m1">π</div>
+    <div class="floating-math-symbol m2">∑</div>
+    <div class="floating-math-symbol m3">√</div>
+    <div class="floating-math-symbol m4">∞</div>
+    <div class="floating-math-symbol m5">π</div>
+  </div>
+
+  <header class="topbar">
+    <nav class="nav">
+      <a href="#top" class="brand" aria-label="Go to top">
+        <div class="brand-mark">AB</div>
+        <div class="brand-text">
+          <strong>Advaith Bhushan</strong>
+          <span>NUS High DSA STEM Portfolio</span>
+        </div>
+      </a>
+      <div class="nav-links" aria-label="Portfolio navigation">
+        <a href="#fit">NUS Fit</a>
+        <a href="#journey">Journey</a>
+        <a href="#achievements">Achievements</a>
+        <a href="#story">My Story</a>
+        <a href="#research">Research Mindset</a>
+        <a href="#evidence">Evidence</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero page-shell">
+      <div>
+        <div class="pill-row">
+          <span class="pill"><span class="dot"></span> DSA Talent Area: Math / Science</span>
+          <span class="pill">Primary 6 · Montfort Junior School</span>
+          <span class="pill">NUS High School Portfolio Draft</span>
+        </div>
+
+        <h1>
+          <span class="gradient-text">I like hard problems</span><br />
+          because they teach me how to think.
+        </h1>
+
+        <p class="hero-copy">
+          My name is <strong>Advaith Bhushan</strong>. I am building this portfolio to show my interest in Mathematics, Science, problem-solving, and research-style learning. I hope to grow in an environment where I can <strong>experiment, explore and excel</strong> with other students who enjoy asking difficult questions.
+        </p>
+
+        <div class="cta-row">
+          <a class="btn primary" href="#achievements">View achievements →</a>
+          <a class="btn" href="#story">Read my story</a>
+          <a class="btn" href="#research">Project placeholder</a>
+        </div>
+      </div>
+
+      <aside class="hero-panel" aria-label="Portfolio summary">
+        <div class="profile-card">
+          <div class="avatar">∑</div>
+          <h2>Math-first, STEM-curious learner</h2>
+          <p>
+            A 3-year record of Math and Science competitions, school recognition, and growing interest in problem-solving beyond classroom questions.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat">
+            <b>2024–26</b>
+            <span>Sustained award history</span>
+          </div>
+          <div class="stat">
+            <b>10+</b>
+            <span>Selected evidence items</span>
+          </div>
+          <div class="stat">
+            <b>Math</b>
+            <span>Core strength</span>
+          </div>
+          <div class="stat">
+            <b>STEM</b>
+            <span>Science + ICT breadth</span>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section id="fit" class="page-shell">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Why NUS High</div>
+          <h2>Fit with how I learn</h2>
+        </div>
+        <p>
+          
+        </p>
+      </div>
+
+      <div class="grid three">
+        <div class="card fit-card">
+          <div class="fit-icon">01</div>
+          <div>
+            <h3>Problem-solving and reasoning</h3>
+            <p>I enjoy Math most when I have to test ideas, spot patterns, and explain why a method works. My competition journey has helped me become more patient with non-routine problems.</p>
+          </div>
+        </div>
+
+        <div class="card fit-card">
+          <div class="fit-icon">02</div>
+          <div>
+            <h3>Research-style curiosity</h3>
+            <p>NUS High’s research and innovation culture interests me because I want to learn how to move from solving given questions to asking my own questions.</p>
+          </div>
+        </div>
+
+        <div class="card fit-card">
+          <div class="fit-icon">03</div>
+          <div>
+            <h3>Math + Science breadth</h3>
+            <p>Math is my strongest area, but my Science and ICT achievements show that I am interested in applying logical thinking across different STEM areas.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="edit-note">
+        <strong></strong> “The kind of problem I enjoy most is…” or “A question I still remember is…”
+      </div>
+    </section>
+
+    <section id="journey" class="page-shell">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Growth Arc</div>
+          <h2>My 3-year learning journey</h2>
+        </div>
+        <p>
+          
+        </p>
+      </div>
+
+      <div class="timeline">
+        <article class="card year-card">
+          <div class="year">2024</div>
+          <h3>Early exposure and challenge</h3>
+          <ul>
+            <li>Built confidence through Math and Science competitions.</li>
+            <li>Learned that Olympiad questions require creativity, not memorisation.</li>
+            <li>Started seeing Math as a way to reason, not just calculate.</li>
+          </ul>
+        </article>
+
+        <article class="card year-card strong">
+          <div class="year">2025</div>
+          <h3>Consistency and school recognition</h3>
+          <ul>
+            <li>Continued participating in Math competitions.</li>
+            <li>Received school recognition for Mathematics.</li>
+            <li>Inducted into IJHS, strengthening the story of consistency and leadership potential.</li>
+          </ul>
+        </article>
+
+        <article class="card year-card">
+          <div class="year">2026</div>
+          <h3>P6 readiness and stronger results</h3>
+          <ul>
+            <li>Achieved Silver in SASMO 2026.</li>
+            <li>Added current-year Math and Science competition evidence.</li>
+            <li>Preparing to explain not only what I won, but what I learned.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="achievements" class="page-shell">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Selected Achievements</div>
+          <h2>Evidence of Math and STEM strength</h2>
+        </div>
+        <p>
+        </p>
+      </div>
+
+      <div class="achievement-reel" aria-label="Selected award certificate reel">
+        <div class="reel-top">
+          <div class="reel-counter">
+            <span class="reel-counter-dot"></span>
+            <span id="awardCounterText">1 / 10</span>
+          </div>
+
+          <div class="reel-controls">
+            <button class="reel-control-btn" id="awardPrevBtn" type="button" aria-label="Previous award">‹</button>
+            <button class="reel-control-btn" id="awardNextBtn" type="button" aria-label="Next award">›</button>
+          </div>
+        </div>
+
+        <div class="award-stage" id="awardStage"></div>
+        <div class="reel-dots" id="awardDots"></div>
+        <p class="reel-help-text">Click the card to open full-page certificate view. Use ← / → keys or swipe on mobile.</p>
+      </div>
+    </section>
+
+    <section id="story" class="page-shell">
+      <div class="story">
+        <div class="quote-card">
+          <div class="quote-mark">“</div>
+          <p>
+            I do not only want to be fast at Math. I want to become better at noticing patterns, explaining my thinking, and learning from questions I could not solve at first.
+          </p>
+        </div>
+
+        <div class="card">
+          <div class="eyebrow">Student Voice</div>
+          <h2 style="margin:0 0 14px; letter-spacing:-0.05em; line-height:1;">My story</h2>
+          <p>
+            Mathematics became interesting to me because the best questions do not show the answer immediately. I have to try one method, check if it works, and sometimes start again. Competitions have taught me that being stuck is part of learning.
+          </p>
+          <p style="margin-top:14px;">
+            Over the last few years, I have joined Math and Science competitions that helped me practise patience, accuracy, and creative thinking. I am proud of my awards, but I also know that the most important part is how I improve after each competition.
+          </p>
+          <div class="placeholder">
+            <strong>Placeholder for Advaith’s own story:</strong><br />
+            Add 5–8 sentences here about a real problem, project, book, experiment, YouTube lesson, coding activity, puzzle, or Math topic he genuinely remembers. This must sound like him, not an adult.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="research" class="page-shell">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">NUS High Readiness</div>
+          <h2>From competitions to research curiosity</h2>
+        </div>
+        <p>
+          
+        </p>
+      </div>
+
+      <div class="split-band">
+        <div>
+          <h3 style="font-size:1.6rem; margin:0 0 10px; letter-spacing:-0.04em;">My project / exploration placeholder</h3>
+          <p style="color:var(--muted); margin:0;">
+            NUS High values students who can ask questions, explore ideas, and communicate their thinking. This section should contain one authentic mini-project or learning exploration.
+          </p>
+          <div class="placeholder">
+            <strong>Insert real project here:</strong><br />
+            Title: [Advaith’s project title]<br />
+            Question I explored: [What was I trying to find out?]<br />
+            What I did: [Steps / method / tools used]<br />
+            What I learned: [Result + reflection]<br />
+            What I would try next: [Improvement / next question]
+          </div>
+        </div>
+
+        <div class="mini-metric">
+          <div class="metric-box">
+            <b>Ask</b>
+            <span>What problem or question interested me?</span>
+          </div>
+          <div class="metric-box">
+            <b>Test</b>
+            <span>What method did I try?</span>
+          </div>
+          <div class="metric-box">
+            <b>Explain</b>
+            <span>Can I show my thinking clearly?</span>
+          </div>
+          <div class="metric-box">
+            <b>Improve</b>
+            <span>What would I do differently next time?</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="mindset" class="page-shell">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">How I Learn</div>
+          <h2>What my achievements have taught me</h2>
+        </div>
+      </div>
+
+      <div class="grid three">
+        <div class="card">
+          <h3>When I am stuck</h3>
+          <p>I try to redraw the problem, test smaller cases, look for patterns, or explain the question in my own words before trying again.</p>
+        </div>
+
+        <div class="card">
+          <h3>When I make mistakes</h3>
+          <p>I check whether the mistake came from rushing, misunderstanding the question, or using the wrong strategy. This helps me improve my next attempt.</p>
+        </div>
+
+        <div class="card">
+          <h3>When I learn with others</h3>
+          <p>I want to become better at explaining my thinking, listening to other methods, and learning how different students approach the same question.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="evidence" class="page-shell">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">Evidence Index</div>
+          <h2>Certificate gallery and proof points</h2>
+        </div>
+        <p>
+          Replace each placeholder with certificate thumbnails or links from Google Drive before publishing.
+        </p>
+      </div>
+
+      <table class="evidence-table" aria-label="Evidence index">
+        <thead>
+          <tr>
+            <th>Evidence</th>
+            <th>Year</th>
+            <th>Portfolio role</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>SASMO Silver Award — Grade 6</td>
+            <td>2026</td>
+            <td>Hero achievement for NUS High Math talent evidence.</td>
+          </tr>
+          <tr>
+            <td>Montfort Junior School — P5 Best in Mathematics</td>
+            <td>2025</td>
+            <td>School validation of Math strength and consistency.</td>
+          </tr>
+          <tr>
+            <td>SIMOC Math Olympiad Silver</td>
+            <td>2025</td>
+            <td>Sustained Math competition track record.</td>
+          </tr>
+          <tr>
+            <td>World Math Competition Silver</td>
+            <td>2026</td>
+            <td>Current-year Math problem-solving evidence.</td>
+          </tr>
+          <tr>
+            <td>World Science Competition Silver</td>
+            <td>2026</td>
+            <td>Science breadth for STEM profile.</td>
+          </tr>
+          <tr>
+            <td>Science Olympiad Gold</td>
+            <td>2024</td>
+            <td>Strong Science evidence to complement Math.</td>
+          </tr>
+          <tr>
+            <td>IJHS Induction</td>
+            <td>2025</td>
+            <td>Consistency, academic recognition, and leadership potential.</td>
+          </tr>
+          <tr>
+            <td>NUS High School Certificate of Participation</td>
+            <td>2025</td>
+            <td>NUS High-specific exposure and interest signal.</td>
+          </tr>
+        </tbody>
+      </table>
+
+     
+
+   
+    
+
+      
+
+        
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="page-shell footer-grid">
+      <div>
+        <strong style="color:white;">Advaith Bhushan · NUS High DSA STEM Portfolio</strong>
+        <div class="print-chip">Draft website for review. Replace placeholders with Advaith’s own project story and certificate images before submission.</div>
+      </div>
+      <a class="btn" href="#top">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <aside class="award-viewer" id="awardViewer" aria-hidden="true">
+    <div class="viewer-top">
+      <div class="viewer-title">
+        <strong id="viewerHeader">SASMO Silver</strong>
+        <span id="viewerSubheader">Math · 2026 · 1 / 10</span>
+      </div>
+
+      <div class="viewer-actions">
+        <a class="viewer-btn" id="openCertLink" href="#" target="_blank" rel="noopener noreferrer">Open certificate ↗</a>
+        <button class="viewer-btn" id="closeAwardViewer" type="button">Close</button>
+      </div>
+    </div>
+
+    <button class="viewer-nav prev" id="viewerPrev" type="button" aria-label="Previous award">‹</button>
+    <button class="viewer-nav next" id="viewerNext" type="button" aria-label="Next award">›</button>
+
+    <div class="viewer-body">
+      <div class="viewer-card" id="viewerCard">
+        <div class="viewer-info">
+          <div class="award-tag-row" id="viewerTags"></div>
+          <h2 id="viewerTitle">SASMO Silver</h2>
+          <p id="viewerDescription"></p>
+          <div class="award-reflection">
+            <strong>My reflection</strong>
+            <span id="viewerReflection"></span>
+          </div>
+        </div>
+
+        <div class="viewer-cert" id="viewerCert"></div>
+      </div>
+    </div>
+  </aside>
+
+  <script>
+    const awards = [
+      {
+        title: "SASMO Silver",
+        category: "Math",
+        year: "2026",
+        type: "Hero Evidence",
+        description: "Current Grade 6 Math Olympiad evidence and one of my strongest recent achievements.",
+        reflection: "Hard questions need patience, not just speed. I learned to slow down and check my method.",
+        fileId: "1-HAMeT-n98RWkHgfN2-HjaRNJ_dK569t"
+      },
+      {
+        title: "P5 Best in Mathematics",
+        category: "School",
+        year: "2025",
+        type: "Academic Strength",
+        description: "School-level recognition showing consistent academic strength in Mathematics.",
+        reflection: "This reminded me that steady effort in school matters as much as competitions.",
+        fileId: "1-I-saGSKp8Nw5a2kvuSbDwTEYAti-lEl"
+      },
+      {
+        title: "SIMOC Math Olympiad Silver",
+        category: "Math",
+        year: "2025",
+        type: "Sustained Effort",
+        description: "External Math competition evidence showing sustained challenge-seeking.",
+        reflection: "Different problems need different strategies. I learned not to use the same method every time.",
+        fileId: "1FI3k4DUKRT_Tjtsy_T1CoZfqmsU_7ifY"
+      },
+      {
+        title: "World Math Competition Silver",
+        category: "Math",
+        year: "2026",
+        type: "Current Year",
+        description: "Current-year Math evidence supporting the problem-solving profile.",
+        reflection: "I learned to check my logic before rushing to the final answer.",
+        fileId: "10DL8BYsuv6IYoRP_f7AOKkanIRBgYfdX"
+      },
+      {
+        title: "World Science Competition Silver",
+        category: "Science",
+        year: "2026",
+        type: "STEM Breadth",
+        description: "Science breadth that supports a fuller STEM profile for NUS High.",
+        reflection: "Science also needs logic, observation, and clear explanation.",
+        fileId: "1S17HNRTqFFaqp029TMAfY7U0xP8rIWPH"
+      },
+      {
+        title: "Science Olympiad Gold",
+        category: "Science",
+        year: "2024",
+        type: "Gold Award",
+        description: "Strong Science evidence that complements Math achievements.",
+        reflection: "Science questions become easier when I understand the concept clearly.",
+        fileId: "18P322Vg2L_p_vkAYXNVvhThQZXEHaEDk"
+      },
+      {
+        title: "IJHS Induction",
+        category: "Leadership",
+        year: "2025",
+        type: "Consistency",
+        description: "Recognition of consistency, academic effort, and leadership potential.",
+        reflection: "Leadership starts with being responsible, consistent, and willing to contribute.",
+        fileId: "1VGdQOTtLYsYGgq8g8rFIhBDaTNhT-XiW"
+      },
+      {
+        title: "SIMOC Math Warriors Outstanding",
+        category: "Math",
+        year: "2024",
+        type: "Distinctive Award",
+        description: "Distinctive achievement that can support problem-solving and teamwork.",
+        reflection: "Teamwork and clear thinking are important in Math challenges.",
+        fileId: "1ax7IJigxubQCtRU6IEr28IoR0l0YLzAp"
+      },
+      {
+        title: "SIMOC MSC Gold",
+        category: "Math",
+        year: "2024",
+        type: "Gold Award",
+        description: "Gold-level evidence from an earlier stage of the journey.",
+        reflection: "Early success should motivate me to keep improving, not stop trying.",
+        fileId: "1hsO1tNY6XC9MtcISgsi8qSEMKIATAz6P"
+      },
+      {
+        title: "NMOS Honourable Mention",
+        category: "Math",
+        year: "2025",
+        type: "Singapore Signal",
+        description: "Local Math Olympiad-style experience and useful Singapore Math signal.",
+        reflection: "Difficult papers teach me where I need to improve.",
+        fileId: "1_Albbvoa2ti7MBRkroJJI511ddfpI2tA"
+      }
+    ];
+
+    const awardStage = document.getElementById("awardStage");
+    const awardCounterText = document.getElementById("awardCounterText");
+    const awardDots = document.getElementById("awardDots");
+    const awardPrevBtn = document.getElementById("awardPrevBtn");
+    const awardNextBtn = document.getElementById("awardNextBtn");
+
+    const awardViewer = document.getElementById("awardViewer");
+    const viewerCard = document.getElementById("viewerCard");
+    const viewerHeader = document.getElementById("viewerHeader");
+    const viewerSubheader = document.getElementById("viewerSubheader");
+    const viewerTags = document.getElementById("viewerTags");
+    const viewerTitle = document.getElementById("viewerTitle");
+    const viewerDescription = document.getElementById("viewerDescription");
+    const viewerReflection = document.getElementById("viewerReflection");
+    const viewerCert = document.getElementById("viewerCert");
+    const openCertLink = document.getElementById("openCertLink");
+    const closeAwardViewer = document.getElementById("closeAwardViewer");
+    const viewerPrev = document.getElementById("viewerPrev");
+    const viewerNext = document.getElementById("viewerNext");
+
+    let currentAward = 0;
+    let lastAwardDirection = "next";
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    function certViewUrl(award) {
+      return `https://drive.google.com/file/d/${award.fileId}/preview`;
+    }
+
+    function certOpenUrl(award) {
+      return `https://drive.google.com/file/d/${award.fileId}/view?usp=sharing`;
+    }
+
+    function tagClass(award) {
+      return award.type.includes("Gold") ? "award-tag gold" : "award-tag";
+    }
+
+    function certificatePanel(award, includeCover = true) {
+      return `
+        <div class="cert-preview-panel">
+          <iframe
+            src="${certViewUrl(award)}"
+            title="${award.title} certificate preview"
+            loading="lazy"
+            allow="autoplay">
+          </iframe>
+          <div class="cert-preview-fallback" aria-hidden="true">
+            <div>
+              <span class="mini">${award.category} · ${award.year}</span>
+              <h4>${award.title}</h4>
+            </div>
+          </div>
+          ${includeCover ? `<button class="cert-click-cover" type="button" aria-label="Open ${award.title} full-page view"></button>` : ""}
+        </div>
+      `;
+    }
+
+    function awardCardMarkup(award, index) {
+      return `
+        <article class="award-card-split" data-index="${index}">
+          <div class="award-detail-panel">
+            <button class="award-main-click" type="button" aria-label="Open ${award.title} full-page view">
+              <div class="award-tag-row">
+                <span class="award-tag">${award.category} · ${award.year}</span>
+                <span class="${tagClass(award)}">${award.type}</span>
+              </div>
+              <h3>${award.title}</h3>
+              <p>${award.description}</p>
+              <div class="award-reflection">
+                <strong>My reflection</strong>
+                ${award.reflection}
+              </div>
+            </button>
+
+            <div class="card-actions">
+              <button class="click-hint" type="button">Click to view full page →</button>
+              <a class="open-cert-link" href="${certOpenUrl(award)}" target="_blank" rel="noopener noreferrer">Open certificate ↗</a>
+            </div>
+          </div>
+
+          ${certificatePanel(award)}
+        </article>
+      `;
+    }
+
+    function renderAwardCards() {
+      awardStage.innerHTML = awards.map(awardCardMarkup).join("");
+
+      awards.forEach((_, index) => {
+        const dot = document.createElement("button");
+        dot.className = "reel-dot-btn";
+        dot.type = "button";
+        dot.setAttribute("aria-label", `Go to award ${index + 1}`);
+        dot.addEventListener("click", () => goToAward(index, index > currentAward ? "next" : "prev"));
+        awardDots.appendChild(dot);
+      });
+
+      document.querySelectorAll(".award-card-split").forEach(card => {
+        const index = Number(card.dataset.index);
+
+        card.querySelector(".award-main-click").addEventListener("click", () => openAwardViewer(index));
+        card.querySelector(".click-hint").addEventListener("click", () => openAwardViewer(index));
+        card.querySelector(".cert-click-cover").addEventListener("click", () => openAwardViewer(index));
+      });
+    }
+
+    function updateAwardReel() {
+      const cards = Array.from(document.querySelectorAll(".award-card-split"));
+
+      cards.forEach((card, index) => {
+        card.classList.remove("is-active", "slide-left");
+
+        if (index === currentAward) {
+          card.classList.add("is-active");
+        } else if (index < currentAward || lastAwardDirection === "prev") {
+          card.classList.add("slide-left");
+        }
+      });
+
+      Array.from(awardDots.children).forEach((dot, index) => {
+        dot.classList.toggle("is-active", index === currentAward);
+      });
+
+      awardCounterText.textContent = `${currentAward + 1} / ${awards.length}`;
+    }
+
+    function goToAward(index, direction = "next") {
+      lastAwardDirection = direction;
+      currentAward = (index + awards.length) % awards.length;
+      updateAwardReel();
+
+      if (awardViewer.classList.contains("is-open")) {
+        updateAwardViewer(true);
+      }
+    }
+
+    function nextAward() {
+      goToAward(currentAward + 1, "next");
+    }
+
+    function prevAward() {
+      goToAward(currentAward - 1, "prev");
+    }
+
+    function openAwardViewer(index) {
+      currentAward = index;
+      updateAwardReel();
+      updateAwardViewer(false);
+      awardViewer.classList.add("is-open");
+      awardViewer.setAttribute("aria-hidden", "false");
+      document.body.style.overflow = "hidden";
+    }
+
+    function closeAwardViewerFn() {
+      awardViewer.classList.remove("is-open");
+      awardViewer.setAttribute("aria-hidden", "true");
+      document.body.style.overflow = "";
+    }
+
+    function updateAwardViewer(animate = true) {
+      const award = awards[currentAward];
+
+      viewerHeader.textContent = award.title;
+      viewerSubheader.textContent = `${award.category} · ${award.year} · ${currentAward + 1} / ${awards.length}`;
+
+      viewerTags.innerHTML = `
+        <span class="award-tag">${award.category} · ${award.year}</span>
+        <span class="${tagClass(award)}">${award.type}</span>
+      `;
+
+      viewerTitle.textContent = award.title;
+      viewerDescription.textContent = award.description;
+      viewerReflection.textContent = award.reflection;
+      viewerCert.innerHTML = `
+        <iframe
+          src="${certViewUrl(award)}"
+          title="${award.title} certificate full-page preview"
+          allow="autoplay">
+        </iframe>
+      `;
+      openCertLink.href = certOpenUrl(award);
+
+      if (animate) {
+        viewerCard.style.animation = "none";
+        viewerCard.offsetHeight;
+        viewerCard.style.animation = "viewerFlipIn 380ms ease both";
+      }
+    }
+
+    awardPrevBtn.addEventListener("click", prevAward);
+    awardNextBtn.addEventListener("click", nextAward);
+    viewerPrev.addEventListener("click", prevAward);
+    viewerNext.addEventListener("click", nextAward);
+    closeAwardViewer.addEventListener("click", closeAwardViewerFn);
+
+    awardViewer.addEventListener("click", event => {
+      if (event.target === awardViewer) {
+        closeAwardViewerFn();
+      }
+    });
+
+    document.addEventListener("keydown", event => {
+      if (event.key === "ArrowRight") nextAward();
+      if (event.key === "ArrowLeft") prevAward();
+      if (event.key === "Escape" && awardViewer.classList.contains("is-open")) {
+        closeAwardViewerFn();
+      }
+    });
+
+    function attachAwardSwipe(target) {
+      target.addEventListener("touchstart", event => {
+        touchStartX = event.changedTouches[0].clientX;
+      }, { passive: true });
+
+      target.addEventListener("touchend", event => {
+        touchEndX = event.changedTouches[0].clientX;
+        const diff = touchStartX - touchEndX;
+
+        if (Math.abs(diff) > 48) {
+          if (diff > 0) nextAward();
+          else prevAward();
+        }
+      }, { passive: true });
+    }
+
+    attachAwardSwipe(awardStage);
+    attachAwardSwipe(awardViewer);
+
+    renderAwardCards();
+    updateAwardReel();
+  </script>
+
+</body>
+</html>
